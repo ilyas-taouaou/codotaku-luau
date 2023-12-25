@@ -2,6 +2,7 @@
 Luau OOP type checked Iterators, inspired from Rust
 
 # API:
+```lua
 Iterator.__call<Item>(self: Iterator<Item>): Item?: Calls the next item in the iterator.
 
 Iterator.new<Item>(next: () -> Item?, size_hint: (() -> (number, number?))?): Iterator<Item>: Creates a new iterator.
@@ -43,3 +44,4 @@ Iterator.Count<Item>(self: Iterator<Item>): number: Returns the number of items 
 Iterator.Collect<Item>(self: Iterator<Item>): {Item}: Collects all items into a table.
 
 Iterator.Unzip<FirstItem, SecondItem>(self: Iterator<Pair<FirstItem, SecondItem>>): ({FirstItem}, {SecondItem}): Separates an iterator of pairs into two tables.
+```
