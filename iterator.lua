@@ -68,11 +68,6 @@ end
 
 -- Iterator Adapters
 function Iterator.Take<Item>(self: Iterator<Item>, count: number): Iterator<Item>    
-    if self.SizeHint then
-        local min, max = self.SizeHint()
-        count = math.min(max or min, count)
-    end
-
     return Iterator.new(function()
         if count == 0 then return nil end
         count -= 1
