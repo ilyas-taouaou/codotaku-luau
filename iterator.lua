@@ -201,7 +201,7 @@ function Iterator.Collect<Item>(self: Iterator<Item>): {Item}
         capacity = max or min
     end
 
-    print(`Collect allocated {capacity} items`)
+    // print(`Collect allocated {capacity} items`)
     local result = table.create(capacity)
     for item in self.Next do
         table.insert(result, item)
